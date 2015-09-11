@@ -19,7 +19,7 @@ from (
         extractValue(xmltype(XML_DOCUMENT), '/AlarmDefinition/@TemplateName') as "GERN_TEMPLATE_NAME",
         extractValue(xmltype(XML_DOCUMENT), '/AlarmDefinition/@TemplateVersion') as "GERN_TEMPLATE_VERSION",
         -- Alarm Predicate
-        extractValue(xmltype(XML_DOCUMENT), '/AlarmTemplate/General/KeyPerformanceIndicator') as "PRED_KPI",
+        extractValue(xmltype(XML_DOCUMENT), '/AlarmDefinition/General/KeyPerformanceIndicator') as "PRED_KPI",
         
         extractValue(xmltype(XML_DOCUMENT), '/AlarmDefinition/AlarmPredicate[1]/Severity/@Level') || ' '
         || extractValue(xmltype(XML_DOCUMENT), '/AlarmDefinition/AlarmPredicate[1]/BinaryOperator/@Symbol') || ' '
