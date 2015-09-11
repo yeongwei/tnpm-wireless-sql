@@ -52,10 +52,10 @@ from (
         extractValue(xmltype(XML_DOCUMENT), '/AlarmDefinition/General/MappedReportFolderName') as "OPT_REPORT_FOLDER_ID",
         
         -- X.773
-        extractValue(xmltype(XML_DOCUMENT), '/AlarmTemplate/AlarmStandardMapping/X733/ProbableCause/@ParameterValue') as "X773_PROBABLE_CAUSE",
-        extractValue(xmltype(XML_DOCUMENT), '/AlarmTemplate/AlarmStandardMapping/X733/AdditionalText/@ParameterValue') as "X773_ADDI_TEXT",
-        extractValue(xmltype(XML_DOCUMENT), '/AlarmTemplate/AlarmStandardMapping/X733/MonitoredAttribute/@ParameterValue') as "X773_MONITORED_ATTR",
-        extractValue(xmltype(XML_DOCUMENT), '/AlarmTemplate/AlarmSettings/UseTrendNotification/@Active') as "X773_USE_TREND_IND"        
+        extractValue(xmltype(XML_DOCUMENT), '/AlarmDefinition/AlarmStandardMapping/X733/ProbableCause/@ParameterValue') as "X773_PROBABLE_CAUSE",
+        extractValue(xmltype(XML_DOCUMENT), '/AlarmDefinition/AlarmStandardMapping/X733/AdditionalText/@ParameterValue') as "X773_ADDI_TEXT",
+        extractValue(xmltype(XML_DOCUMENT), '/AlarmDefinition/AlarmStandardMapping/X733/MonitoredAttribute/@ParameterValue') as "X773_MONITORED_ATTR",
+        extractValue(xmltype(XML_DOCUMENT), '/AlarmDefinition/AlarmSettings/UseTrendNotification/@Active') as "X773_USE_TREND_IND"        
       from 
         alarm_definitions
       ) tbl1
